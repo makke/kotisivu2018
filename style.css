@@ -1,0 +1,106 @@
+body {
+  margin:0px;
+}
+
+.card-wrapper {
+  height: 100vh;
+  width:100%;
+  background-color: #FFF8E1;
+  display: flex;
+}
+.card {
+  flex-basis: 100%;
+  border: 1px solid rgb(192, 192, 192);
+  max-width: 30em;
+  margin: auto;
+  color: #fff;
+  padding: 1em;
+  background-color: #FDB745;
+  box-shadow: 0px 0px 3px 1px #747678, inset 0px 0px 3px 1px #C0C0C0;
+}
+
+.profile-row {
+  display: flex;
+}
+.profile-row .pic {
+  flex-basis: 33.3%;
+  align-self: center;
+  position: relative;
+  margin: 24px;
+}
+.profile-row .desc {
+  flex-grow: 66.6%;
+}
+
+/* Text */
+.profile-row .desc {
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0px 0px 4px #747678;
+  letter-spacing: 1px;
+}
+.profile-row .desc h1 {
+  margin: 0px;
+}
+.profile-row .desc p {
+  line-height: 1.2;
+}
+
+/* Picture */
+.profile-row .pic img {
+  max-width: 100%;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0px 0px 4px 3px #747678;
+}
+.profile-row .desc {
+  padding: 1em;
+}
+
+/* Arcs and their animation */
+.profile-row .pic .dp-arc-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 6px solid transparent;
+  border-top-color: #747678;
+  border-radius: 50%;
+  top: -6px;
+  left: -6px;
+
+  animation-duration: 2s;
+  animation-name: rotate-clock;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate-clock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-row .pic .dp-arc-outer {
+  position: absolute;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border: 6px solid transparent;
+  border-bottom-color: #747678;
+  border-radius: 50%;
+  top: -12px;
+  left: -12px;
+
+  animation-duration: 2s;
+  animation-name: rotate-anticlock;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate-anticlock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
