@@ -44,9 +44,14 @@ body {
 .profile-row .desc p {
   line-height: 1.2;
 }
-
 .italic {
     font-style: italic;
+}
+@media only screen and (max-width: 400px) {
+  .profile-row .back p {
+    /* margin: 0px; */
+    font-size: 14px;
+  }
 }
 
 /* Picture */
